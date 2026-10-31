@@ -1,0 +1,10 @@
+.tools/
+build/
+__pycache__/
+*.pyc
+local.properties
+.gradle/
+original/
+analysis/recovered/
+analysis/hardware/
+*.xapk

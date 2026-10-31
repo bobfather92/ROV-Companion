@@ -6,7 +6,17 @@ RŌV Companion is an independent Android application built to keep an existing c
 
 The project began when the original RŌV Motion app became unreliable on a newer Android phone. Companion provides an alternative controller with automatic connection, adjustable travel limits and background operation.
 
-**Version 1.0.0 · Android 12+ · Bluetooth LE · Works offline
+**Version 1.0.0 · Android 12+ · Bluetooth LE · Works offline**
+
+[Download the APK](dist/ROV-Companion-1.0.0.apk) · [1.0.0 release notes](RELEASE_NOTES.md) · [Build and development](docs/DEVELOPMENT.md)
+
+## A closer look
+
+| Control panel | Choose your travel range | Background controls |
+| --- | --- | --- |
+| <img src="docs/images/control-panel.png" width="240" alt="RŌV Companion control panel with speed, easing and direction controls"> | <img src="docs/images/travel-range.png" width="240" alt="Travel range editor with A at zero percent and B at one hundred percent"> | <img src="docs/images/background-controls.png" width="240" alt="Android slider notification with Stop and Disconnect actions"> |
+
+Screenshots show the native application running in an Android 16 emulator. Connection and movement states are simulated for these captures.
 
 ## Features
 
@@ -67,4 +77,22 @@ Use the app's Stop or Disconnect action to finish a session. Android force-stop 
 | Nearby devices / Bluetooth scan and connect | Discover and communicate with the slider |
 | Precise Location while using the app | Compatibility discovery for the slider's BLE advertisements; GPS coordinates are not collected |
 | Notifications | Display connection status and background Stop/Disconnect controls |
-| Foreground service and wake lock | Maintain connected-device operation and monitor active movement when the screen is off
+| Foreground service and wake lock | Maintain connected-device operation and monitor active movement when the screen is off |
+
+Settings are stored locally. Diagnostics stay in a bounded in-memory log until you copy them to the clipboard. The app has no Internet permission, accounts, analytics or automatic diagnostic uploads. Background Location permission is not requested.
+
+## Current scope and testing
+
+Version 1.0.0 covers slider motion control. Time-lapse, camera shutter triggering and phone camera features are not implemented.
+
+Six JVM test suites check the protocol, operation queue, Stop recovery, discovery, loop restarts and custom/full travel ranges. Android 16 instrumentation checks the native interface, service lifecycle, screen-off behavior, Activity recreation and notification Stop dispatch at normal and larger text sizes.
+
+Emulator tests inject Bluetooth readiness and movement state; they do not establish physical motor-command delivery. See the [validation record](dist/validation-1.0.0.json) and [development guide](docs/DEVELOPMENT.md) for the test boundaries.
+
+## Feedback and contributions
+
+Bug reports, compatibility reports and focused improvements are welcome. Include the Companion version, phone model, Android version, slider model, and steps to reproduce the issue. Diagnostics are available from the settings menu; they can contain Bluetooth device names and addresses, so review them before posting publicly.
+
+For code changes, see [Build and development](docs/DEVELOPMENT.md). Changes to Bluetooth commands or movement handling should include relevant controller tests and clearly state whether a real slider was used.
+
+RŌV Companion is an independent project and is not affiliated with or endorsed by Rhino. Product names identify compatible hardware.

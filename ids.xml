@@ -1,0 +1,15 @@
+<resources>
+    <item name="discovery_screen" type="id" />
+    <item name="control_screen" type="id" />
+    <item name="connection_title" type="id" />
+    <item name="success_mark" type="id" />
+    <item name="motion_action" type="id" />
+    <item name="speed_slider" type="id" />
+    <item name="ease_slider" type="id" />
+    <item name="loop_toggle" type="id" />
+    <item name="range_card" type="id" />
+    <item name="range_start" type="id" />
+    <item name="range_end" type="id" />
+    <item name="range_save" type="id" />
+    <item name="control_product_image" type="id" />
+</resources>
