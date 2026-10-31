@@ -93,6 +93,4 @@ Emulator tests inject Bluetooth readiness and movement state; they do not establ
 
 Bug reports, compatibility reports and focused improvements are welcome. Include the Companion version, phone model, Android version, slider model, and steps to reproduce the issue. Diagnostics are available from the settings menu; they can contain Bluetooth device names and addresses, so review them before posting publicly.
 
-For code changes, see [Build and development](docs/DEVELOPMENT.md). Changes to Bluetooth commands or movement handling should include relevant controller tests and clearly state whether a real slider was used.
-
 RŌV Companion is an independent project and is not affiliated with or endorsed by Rhino. Product names identify compatible hardware.
