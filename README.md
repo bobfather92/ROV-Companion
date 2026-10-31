@@ -31,6 +31,6 @@ The default travel range is 5–95%. Selecting 0–100% uses the physical calibr
 
 The app works offline without accounts or analytics. GPS coordinates are not collected.
 
-Time-lapse and camera shutter controls are not included. Other slider models are unverified. Version 1.0.0 has passed software and emulator checks; its latest background and full-travel features still need physical-device confirmation.
+Time-lapse and camera shutter controls are not added and will be included in a future releae. Other slider models are unverified. Version 1.0.0 has passed software and emulator checks; its latest background and full-travel features still need physical-device confirmation.
 
 An independent project, unaffiliated with Rhino.
